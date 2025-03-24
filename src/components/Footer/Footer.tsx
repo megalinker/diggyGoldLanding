@@ -1,7 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
-import { goICPSwap } from '../../utils/clickUtils';
-import OrangeButton from '../OrangeButton/OrangeButton';
-import SocialIcons from '../SocialIcons/SocialIcons';
+import { goICPSwap } from '../../utils/clickUtils.ts';
+import OrangeButton from '../OrangeButton/OrangeButton.tsx';
+import SocialIcons from '../SocialIcons/SocialIcons.tsx';
 import styles from './Footer.module.scss';
 import DiggyFooter from '/assets/DiggyFooter.webp';
 

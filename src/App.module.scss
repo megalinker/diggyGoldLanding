@@ -2,16 +2,17 @@
 
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .MainDiv {
   height: 100vh;
-  min-height: 850px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, #0913FB, #0210B5);
+  background: url('/assets/diggyGoldBG.webp') no-repeat center center;
+  background-size: cover;
   position: relative;
   z-index: 1;
 }
@@ -29,14 +30,6 @@ p {
 .SubText {
   font-family: "Manrope", sans-serif;
   min-width: 300px;
-}
-
-.Coins {
-  display: flex;
-  flex-direction: row;
-  gap: 3vw;
-  align-items: center;
-  z-index: 1;
 }
 
 .TopBar {

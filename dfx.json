@@ -1,13 +1,22 @@
 {
   "canisters": {
+    "backend": {
+      "type": "motoko",
+      "main": "backend/Backend.mo",
+      "declarations": {
+        "node_compatibility": true
+      }
+    },
     "frontend": {
       "type": "assets",
-      "source": ["dist/"]
+      "source": [
+        "dist/"
+      ]
     }
   },
   "defaults": {
     "build": {
-      "packtool": "npm run --silent sources"
+      "packtool": "mops sources"
     }
   },
   "output_env_file": ".env",

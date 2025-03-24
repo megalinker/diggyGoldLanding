@@ -21,8 +21,8 @@
     align-items: center;
     padding-top: 0.25vw;
     padding-bottom: 0.25vw;
-    padding-left: max(10px, 0.75vw);
-    padding-right: max(10px, 0.75vw);
+    padding-left: max(20px, 1.25vw);
+    padding-right: max(20px, 1.25vw);
     border-radius: 50px;
     font-size: 2em;
     background: #FF7200;
@@ -31,6 +31,7 @@
     transform: translateY(-10px);
     transition: transform 0.1s ease-in-out;
     border: 1.5px solid #e99546;
+    user-select: none;
 }
 
 .pushable:active .front {

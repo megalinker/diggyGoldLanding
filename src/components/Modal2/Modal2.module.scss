@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    width: 80vw;
+    max-width: 1000px;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 33px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: modalIn 0.5s ease-out forwards;
+    box-sizing: content-box;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@keyframes modalIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.headerText {
+    font-size: clamp(1.75em, 3vw, 4.5em);
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background: linear-gradient(120deg,
+            gold 40%,
+            #fff 50%,
+            gold 60%);
+    background-size: 125% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 5s linear infinite;
+    margin-top: 0;
+    margin-bottom: (25px, 2vw, 50px);
+}
+
+.section {
+    margin-bottom: 15px;
+}
+
+.subHeader {
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(1em, 1.33vw, 2em);
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.paragraph {
+    font-family: "Fredoka", sans-serif;
+    text-align: left;
+    font-weight: 300;
+    width: 100%;
+    font-size: clamp(1.15em, 1.33vw, 2em);
+    margin-top: clamp(10px, 1.33vw, 50px);
+    margin-bottom: 10px;
+}
+
+.list {
+    font-size: clamp(0.75em, 1.33vw, 2em);
+    font-family: "Fredoka", sans-serif;
+    text-align: left;
+    list-style-position: inside;
+    margin: 0;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.list li {
+    margin: 0;
+    padding: 0;
+    line-height: 1.25;
+}
+
+
+.bottomBar {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+
+.sideImage {
+    width: 200px;
+}
+
+@keyframes shine {
+    from {
+        background-position: 225% 0;
+    }
+
+    to {
+        background-position: -150% 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .buttonContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modalContent {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .sideImage {
+        width: 150px;
+    }
+
+    .closeIcon {
+        width: 25px;
+        height: 25px;
+    }
+}

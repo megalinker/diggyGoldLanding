@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+.MiddleMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    min-width: 300px;
+    position: relative;
+
+}
+
+.textWrapper {
+    position: relative;
+    width: 100%;
+    height: 5em;
+}
+
+.message {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    font-size: clamp(3.85em, 3.85vw, 4.5em);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.text2Font {
+    font-size: clamp(2.9em, 4vw, 4.5em);
+}
+
+.golden {
+    font-weight: bold;
+    background: linear-gradient(120deg,
+            gold 40%,
+            #fff 50%,
+            gold 60%);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 2s linear infinite;
+}
+
+.blueGradient {
+    background: linear-gradient(120deg, #00f, #0ff);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.text1Initial {
+    animation: text1Animation 14s forwards;
+}
+
+@keyframes text1Animation {
+    0% {
+        opacity: 0;
+    }
+
+    7.1% {
+        opacity: 1;
+    }
+
+    32.1% {
+        opacity: 1;
+    }
+
+    39.3% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.text2Initial {
+    animation: text2Animation 14s forwards;
+}
+
+@keyframes text2Animation {
+
+    0%,
+    39.3% {
+        opacity: 0;
+    }
+
+    46.4% {
+        opacity: 1;
+    }
+
+    57.1% {
+        opacity: 1;
+    }
+
+    64.3% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.text3Initial {
+    animation: text3Animation 14s forwards;
+}
+
+@keyframes text3Animation {
+
+    0%,
+    64.3% {
+        opacity: 0;
+    }
+
+    71.4% {
+        opacity: 1;
+    }
+
+    92.9% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.text1Loop {
+    animation: text1LoopAnimation 11s linear infinite;
+}
+
+@keyframes text1LoopAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    9.09% {
+        opacity: 1;
+    }
+
+    18.18% {
+        opacity: 1;
+    }
+
+    27.27% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.text2Loop {
+    animation: text2LoopAnimation 11s linear infinite;
+}
+
+@keyframes text2LoopAnimation {
+
+    0%,
+    27.27% {
+        opacity: 0;
+    }
+
+    36.36% {
+        opacity: 1;
+    }
+
+    54.55% {
+        opacity: 1;
+    }
+
+    63.64% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.text3Loop {
+    animation: text3LoopAnimation 11s linear infinite;
+}
+
+@keyframes text3LoopAnimation {
+
+    0%,
+    63.64% {
+        opacity: 0;
+    }
+
+    72.73% {
+        opacity: 1;
+    }
+
+    90.91% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.animatedMiddleButton {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shine {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: -100% 0;
+    }
+}

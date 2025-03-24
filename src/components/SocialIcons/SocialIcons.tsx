@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SocialIcons.module.scss';
 import DiscordIcon from '/assets/DiscordIcon.svg';
 import XIcon from '/assets/X_icon.svg';
-import { goDiggyscord, goDiggyX } from '../../utils/clickUtils';
+import { goDiggyscord, goDiggyX } from '../../utils/clickUtils.ts';
 
 const SocialIcons: React.FC = () => {
 

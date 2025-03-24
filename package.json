@@ -8,14 +8,26 @@
     "build": "tsc && vite build",
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" \"backend/**/*.mo\"",
     "start": "run-p start:frontend",
-    "start:frontend": "vite --config vite.config.ts --port 3000"
+    "start:frontend": "vite --config vite.config.ts --port 3000",
+    "sources": "mops sources"
   },
   "dependencies": {
+    "@dfinity/agent": "^2.3.0",
+    "@dfinity/auth-client": "^2.3.0",
+    "@dfinity/candid": "^2.3.0",
+    "@dfinity/identity": "^2.3.0",
+    "@dfinity/ledger-icp": "^2.6.10",
+    "@dfinity/principal": "^2.3.0",
+    "@dfinity/utils": "^2.10.1",
+    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-responsive": "^10.0.1"
+    "react-responsive": "^10.0.1",
+    "url": "^0.11.4",
+    "vite-plugin-static-copy": "^2.3.0"
   },
   "devDependencies": {
+    "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.0.1",
