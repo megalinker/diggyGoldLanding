@@ -15,6 +15,10 @@ const Modal: React.FC<ModalProps> = ({ setIframeVisible, onClose }) => {
 
     const isSmallScreen = useMediaQuery({ query: '(max-width: 700px)' });
 
+    const goToGame = () => {
+        window.open("https://6v7kz-xaaaa-aaaal-ar7ea-cai.raw.icp0.io/", "_blank");
+    };
+
     return (
         <div className={styles.modalOverlay} onClick={onClose}>
             <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -32,8 +36,7 @@ const Modal: React.FC<ModalProps> = ({ setIframeVisible, onClose }) => {
                     <h2 className={styles.subHeader}>What Are Golds?</h2>
                     <p className={styles.paragraph}>
                         Golds are the in-game currency within <strong>DIGGY</strong>. You will need Golds to play the game and access special buffs that enhance your gameplay experience. Golds can be purchased directly from the game's marketplace using the $DIGGY token.
-                        <br /><br />
-                        <strong>Special Offer:</strong> By pre-registering, you'll receive free Golds as a bonus and gain exclusive access to a special launch event.
+
                     </p>
                 </div>
 
@@ -61,10 +64,9 @@ const Modal: React.FC<ModalProps> = ({ setIframeVisible, onClose }) => {
                             <img src={CoinBag} className={styles.sideImage} />
                         )}
                         <OrangeButton
-                            text="CLAIM MY GOLD"
+                            text="PLAY THE GAME"
                             onClick={() => {
-                                setIframeVisible(true);
-                                onClose();
+                                goToGame();
                             }}
                         />
                         <img src={CoinBag} className={styles.sideImage} />

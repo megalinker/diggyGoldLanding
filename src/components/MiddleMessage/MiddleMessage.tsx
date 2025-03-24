@@ -124,6 +124,10 @@ const MiddleMessage: React.FC<MiddleMessageProps> = ({ iframeVisible, setIframeV
         }
     };
 
+    const goToGame = () => {
+        window.open("https://6v7kz-xaaaa-aaaal-ar7ea-cai.raw.icp0.io/", "_blank");
+    };
+
     return (
         <div className={styles.MiddleMessage}>
 
@@ -142,7 +146,7 @@ const MiddleMessage: React.FC<MiddleMessageProps> = ({ iframeVisible, setIframeV
                 </p>
             </div>
             <div className={styles.animatedMiddleButton}>
-                <OrangeButton fontSize="3.25em" text={hasClaimed === "" ? "CLAIM YOUR GOLD" : "SHARE ON X"} onClick={handleConnect} />
+                <OrangeButton fontSize="3.25em" text="PLAY THE GAME" onClick={goToGame} />
             </div>
             {iframeVisible && (
                 <iframe
